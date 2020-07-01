@@ -1,17 +1,32 @@
 package back;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Main1037 {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
 		
-		int input = Integer.parseInt(st.nextToken());
+		int N = sc.nextInt();
+		int [] Number = new int [N];
+		int Max = 0;
+		int Min = 0;
 		
-		
+		for (int i = 0; i<N; i++) {
+			Number[i] = sc.nextInt();
+			
+			if(i == 0) {
+				Max = Number[0];
+				Min = Number[0];
+			}
+			
+			if(Max < Number[i])
+				Max = Number[i];
+			
+			if(Min > Number[i])
+				Min = Number[i];
+		}
+		System.out.println(Max * Min);
+	
 	}
 }
