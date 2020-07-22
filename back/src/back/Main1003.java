@@ -3,7 +3,7 @@ package back;
 import java.util.Scanner;
 
 public class Main1003 {
-
+//동적 프로그래밍
 
 	public static void main(String[] args) {
 
@@ -18,7 +18,6 @@ public class Main1003 {
 				f[i][j] = f[i-1][j] + f[i-2][j];	
 			}
 		}
-		
 		
 		for(int i = 0; i < testCase; i++) {
 			int a = sc.nextInt();
